@@ -1,0 +1,11 @@
+C:\Users\ramon\source\repos\EMCOR\Core\bin\Release\Core.dll.config
+C:\Users\ramon\source\repos\EMCOR\Core\bin\Release\Core.dll
+C:\Users\ramon\source\repos\EMCOR\Core\bin\Release\Core.pdb
+C:\Users\ramon\source\repos\EMCOR\Core\bin\Release\EntityFramework.dll
+C:\Users\ramon\source\repos\EMCOR\Core\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\ramon\source\repos\EMCOR\Core\bin\Release\EntityFramework.xml
+C:\Users\ramon\source\repos\EMCOR\Core\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\ramon\source\repos\EMCOR\Core\obj\Release\Core.csprojAssemblyReference.cache
+C:\Users\ramon\source\repos\EMCOR\Core\obj\Release\Core.csproj.CopyComplete
+C:\Users\ramon\source\repos\EMCOR\Core\obj\Release\Core.dll
+C:\Users\ramon\source\repos\EMCOR\Core\obj\Release\Core.pdb

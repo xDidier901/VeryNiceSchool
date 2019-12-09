@@ -1,0 +1,149 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/School/Courses.css" rel="stylesheet" />
+
+<div class="row">
+    <div class="col-xs-12 text-center">
+        <h2><i class="fas fa-book"></i> Courses</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <button id="newCourseButton" type="button" class="btn btn-primary"><i class="fas fa-plus"></i> New</button>
+    </div>
+    <div class="col-xs-12">
+        <table id="coursesTable" class="table table-striped"></table>
+    </div>
+</div>
+
+<div class="modal" id="courseModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title text-center">Create / Edit Course</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row ">
+
+                    <div class="col-xs-12 col-md-4">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputCourseNameLabel">Course</span>
+                            </div>
+                            <input id="inputCourseName" type="text" class="form-control" aria-describedby="inputCourseNameLabel">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-4">
+                        <div class="input-group ">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputCourseCreditsLabel">Credits</span>
+                            </div>
+                            <input id="inputCourseCredits" type="number" min="1" class="form-control" aria-describedby="inputCourseCreditsLabel">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-4">
+                        <div class="input-group ">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="instructorSelectLabel">Instructor</span>
+                            </div>
+                            <select id="instructorSelect" class="form-control" aria-describedby="instructorSelectLabel"></select>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="saveCourseButton" type="button" class="btn btn-primary"><i class="fas fa-save"></i> Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="fullInfoModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title text-center">Full Course Information</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row ">
+
+                    <div class="col-xs-12 col-md-4">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputInfoCourseNameLabel">Course</span>
+                            </div>
+                            <input disabled id="inputInfoCourseName" type="text" class="form-control" aria-describedby="inputInfoCourseNameLabel">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-4">
+                        <div class="input-group ">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputInfoCourseCreditsLabel">Credits</span>
+                            </div>
+                            <input disabled id="inputInfoCourseCredits" type="text" class="form-control" aria-describedby="inputInfoCourseCreditsLabel">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-4">
+                        <div class="input-group ">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputInfoCourseInstructorLabel">Instructor</span>
+                            </div>
+                            <input disabled id="inputInfoCourseInstructor" type="text" class="form-control" aria-describedby="inputInfoCourseInstructorLabel">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <table id="studentsTable" class="table table-striped"></table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="deleteModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title text-center">Delete Course</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row text-center">
+                    <h4>Are you sure that you want to to delete this course?</h4>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="deleteCourseButton" type="button" class="btn btn-primary"><i class="fas fa-trash-alt"></i> Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="~/Scripts/School/Courses/Courses.js"></script>
